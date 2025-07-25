@@ -14,7 +14,8 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 header {
@@ -72,4 +73,52 @@ main {
   translate: -3px -3px;
   box-shadow: 5px 5px 10px black;
   transition: translate 0.2s, border 0.1s;
+}
+
+@media (max-width: 768px) {
+  header {
+    font-size: 1rem;
+    position: static;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .celular {
+    width: 90vw;
+    height: calc(90vw * 2);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+    position: static;
+  }
+
+  #tela {
+    width: 78vw;
+    height: calc(78vw * 1.77);
+    top: 13%;
+    left: 6%;
+  }
+
+  .redes-sociais {
+    position: static;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .redes-sociais img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+
+  body {
+    overflow-y: auto;
+    background-attachment: scroll;
+  }
 }
